@@ -10,11 +10,13 @@
 
 <body>
 
-<div class="promo">
-  <header class="page-header">
-    <div class="container  container--relative">
-      <div class="row">
-
+<div class="promo  jquery-background-video-wrapper">
+  <!-- добавить постер к видео!! -->
+  <video class="promo__video  jquery-background-video" width height autoplay loop poster="...">
+    <source src="img/bg-video--promo.mp4" type="video/mp4"></source>
+  </video>
+  <div class="container  container--relative">
+    <header class="page-header">
       <div class="logo">
         <a href="#">
           <img src="http://placehold.it/200x90" alt="Логотип">
@@ -25,53 +27,114 @@
         <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
       </div>
 
+      <a href="#" class="toggler" id="toggler"><span></span></a>
+      <div class="burger-menu" id="burger">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+            <li class="main-nav__list-item"><a href="#">О нас</a></li>
+            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu__contacts">
+          <a href="mailto:np@rline.ru">np@rline.ru</a>
+          <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+        </div>
+
+        <form class="callback-form" action="#">
+          <legend class="callback-form__title">Обратный звонок</legend>
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">ФИО</label>
+          </div>
+
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Компания</label>
+          </div>
+
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+          </div>
+
+          <input type="submit" value="Заказать">
+        </form>
+      </div>
+    </header>
+
+    <div class="promo-info-wrap">
+      <div class="promo-info">
+        <h1 class="promo-info__title">Таможенный брокер Р&#8209;Лайн&nbsp;Фуд</h1>
+        <p class="promo-info__descr">
+          Коммерческая группа по работе с&nbsp;пищевой и непищевой химией, ингредиентами, сырьем, готовыми продуктами
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<div class="offers">
+  <div class="container  container--relative">
+    <header class="page-header  page-header--orange">
+      <div class="logo">
+        <a href="#">
+          <img src="http://placehold.it/200x90" alt="Логотип">
+        </a>
+      </div>
+
+      <div class="phone">
+        <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
       </div>
 
       <a href="#" class="toggler" id="toggler"><span></span></a>
-    </div>
+      <div class="burger-menu" id="burger">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+            <li class="main-nav__list-item"><a href="#">О нас</a></li>
+            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
 
-    <div class="burger-menu" id="burger">
+        <div class="burger-menu__contacts">
+          <a href="mailto:np@rline.ru">np@rline.ru</a>
+          <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+        </div>
 
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#">Предложения</a></li>
-          <li class="main-nav__list-item"><a href="#">О нас</a></li>
-          <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
-          <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
-          <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
-          <li class="main-nav__list-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+        <form class="callback-form" action="#">
+          <legend class="callback-form__title">Обратный звонок</legend>
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">ФИО</label>
+          </div>
 
-      <div class="burger-menu__contacts">
-        <a href="mailto:np@rline.ru">np@rline.ru</a>
-        <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Компания</label>
+          </div>
+
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+          </div>
+
+          <input type="submit" value="Заказать">
+        </form>
       </div>
-
-      <form class="callback-form" action="#">
-        <legend class="callback-form__title">Обратный звонок</legend>
-        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample3">
-          <label class="mdl-textfield__label" for="sample3">ФИО</label>
-        </div>
-
-        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample3">
-          <label class="mdl-textfield__label" for="sample3">Компания</label>
-        </div>
-
-        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample3">
-          <label class="mdl-textfield__label" for="sample3">+7 ()</label>
-        </div>
-
-        <input type="submit" value="Заказать">
-      </form>
-    </div>
-
-  </header>
+    </header>
+  </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/jquery.background-video.js"></script>
 </body>
 </html>

@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         // откуда
         cwd: 'src/img/',
         // какие файлы (все картинки (см. расширения) из корня указанной папки и всех подпапок)
-        src: ['**/*.{png,jpg,gif,svg}'],
+        src: ['**/*.{png,jpg,gif,svg,mp4}'],
         // куда
         dest: 'build/img/',
       },

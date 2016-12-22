@@ -1,13 +1,49 @@
-.page-header {
+.promo {
   position: relative;
+  height: 100vh;
+  width: 100%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+  }
+}
+
+.promo__video {
+  z-index: 0;
+
+  @media (max-width: @screen-sm) {
+    display: none;
+  }
+}
+
+.page-header {
+  .make-row();
+  position: relative;
+  z-index: 100;
+
+  &--orange {
+    .toggler > span {
+      background: @active-color--dark;
+
+      &:before,
+      &:after {
+        background: @active-color--dark;
+      }
+    }
+
+  }
 }
 
 .container--relative {
   position: relative;
-}
-
-.row {
-  .make-row();
 }
 
 .logo {
@@ -18,22 +54,21 @@
   .make-lg-column(3);
   .make-lg-column-offset(5);
 
-  a{
+  a {
     .h3();
-    color:  @text-color--light;
+    color: @text-color--light;
   }
 }
 
 .toggler {
   position: absolute;
-  z-index: 1;
+  z-index: 110;
   top: 0;
   right: 10px;
   display: flex;
   align-items: center;
   width: 37px;
   height: 3em;
-  // line-height: 3em;
   user-select: none;
 
   > span {
@@ -102,6 +137,7 @@
   padding-left: 25px;
   background-color: @grey;
   color: @text-color;
+  z-index: 100;
 
   &--visible {
     display: block;
@@ -124,12 +160,20 @@
     }
 
     a {
+      .h2();
       display: block;
-      height: 3em;
-      line-height: 3;
       color: @text-color;
-      font-weight: 700;
-      text-decoration: none;
-      margin-bottom: 1px;
+
+      &:hover,
+      &:active {
+        color: @active-color;
+        transition: .3s;
+      }
     }
   }
+
+.burger-menu__contacts {
+  a {
+    display: block;
+  }
+}

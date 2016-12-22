@@ -578,8 +578,10 @@ th {
 .container-fluid:after,
 .row:before,
 .row:after,
-.row:before,
-.row:after {
+.page-header:before,
+.page-header:after,
+.promo-info-wrap:before,
+.promo-info-wrap:after {
 	content: " ";
 	display: table;
 }
@@ -588,7 +590,8 @@ th {
 .container:after,
 .container-fluid:after,
 .row:after,
-.row:after {
+.page-header:after,
+.promo-info-wrap:after {
 	clear: both;
 }
 
@@ -690,6 +693,10 @@ html {
 body {
 	margin: 0;
 	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #282121;
+	font-weight: 400;
 }
 
 a {
@@ -712,22 +719,175 @@ textarea {
 	line-height: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
 .promo {
 	height: 100vh;
 	background-color: #6d6857;
 }
 
-.page-header {
+.offers {
+	height: 100vh;
+}
+
+/**
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) 2015 BG Stock - html5backgroundvideos.com
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/**
+ * Set default positioning as a fallback for if the plugin fails
+ */
+
+.jquery-background-video-wrapper {
 	position: relative;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.jquery-background-video {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	object-fit: cover;
+	transform: translate(-50%, -50%);
+}
+
+/**
+ * Fade in videos
+ * Note the .js class - so non js users still
+ * see the video
+ */
+
+.js .jquery-background-video {
+	opacity: 0;
+	transition: opacity 300ms linear;
+}
+
+.js .jquery-background-video.is-visible {
+	opacity: 1;
+}
+
+/**
+ * Pause/play button
+ */
+
+.jquery-background-video-pauseplay {
+	position: absolute;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 15px;
+	padding: 0 !important;
+	cursor: pointer;
+	outline: none !important;
+}
+
+.jquery-background-video-pauseplay span {
+	display: none;
+}
+
+.jquery-background-video-pauseplay:after,
+.jquery-background-video-pauseplay:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all .3s ease;
+}
+
+.jquery-background-video-pauseplay.play:before {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 15px solid #FFF;
+}
+
+.jquery-background-video-pauseplay.pause:before,
+.jquery-background-video-pauseplay.pause:after {
+	border-top: 10px solid #FFF;
+	border-bottom: 10px solid #FFF;
+	border-left: 5px solid #FFF;
+}
+
+.jquery-background-video-pauseplay.pause:after {
+	left: 10px;
+}
+
+.promo {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+.promo:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.promo__video {
+	z-index: 0;
+}
+
+.page-header {
+	margin-left: -10px;
+	margin-right: -10px;
+	position: relative;
+	z-index: 100;
+}
+
+.page-header--orange .toggler > span {
+	background: #e65023;
+}
+
+.page-header--orange .toggler > span:before,
+.page-header--orange .toggler > span:after {
+	background: #e65023;
 }
 
 .container--relative {
 	position: relative;
-}
-
-.row {
-	margin-left: -10px;
-	margin-right: -10px;
 }
 
 .logo {
@@ -753,7 +913,7 @@ textarea {
 
 .toggler {
 	position: absolute;
-	z-index: 1;
+	z-index: 110;
 	top: 0;
 	right: 10px;
 	display: -ms-flexbox;
@@ -831,6 +991,7 @@ textarea {
 	padding-left: 25px;
 	background-color: #f7f7f7;
 	color: #282121;
+	z-index: 100;
 }
 
 .burger-menu--visible {
@@ -852,18 +1013,58 @@ textarea {
 }
 
 .main-nav__list-item a {
+	font-size: 24px;
+	line-height: 33px;
+	font-weight: 400;
+	text-transform: uppercase;
 	display: block;
-	height: 3em;
-	line-height: 3;
 	color: #282121;
+}
+
+.main-nav__list-item a:hover,
+.main-nav__list-item a:active {
+	color: #f0731e;
+	transition: .3s;
+}
+
+.burger-menu__contacts a {
+	display: block;
+}
+
+.promo-info-wrap {
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-top: 180px;
+}
+
+.promo-info {
+	position: relative;
+	z-index: 10;
+	color: #ffffff;
+}
+
+.promo-info {
+	position: relative;
+	min-height: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.promo-info__title {
+	font-size: 38px;
+	line-height: 53px;
 	font-weight: 700;
-	text-decoration: none;
-	margin-bottom: 1px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.promo-info__descr {
+	padding-right: 40px;
 }
 
 .mdl-textfield {
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	display: inline-block;
 	box-sizing: border-box;
 	width: 300px;
@@ -1846,6 +2047,19 @@ td.visible-lg {
 
 .phone {
 	margin-left: 41.66666667%;
+}
+
+.promo-info {
+	float: left;
+	width: 33.33333333%;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.promo__video {
+	display: none;
 }
 
 }

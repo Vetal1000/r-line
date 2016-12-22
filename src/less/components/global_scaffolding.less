@@ -16,6 +16,10 @@ html {
 body {
   margin: 0;
   font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @text-color;
+  font-weight: @font-weight;
 }
 
 a {
@@ -44,7 +48,20 @@ textarea {
   line-height: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
 .promo {
   height: 100vh;
   background-color: @bg-color--promo;
+}
+
+.offers {
+  height: 100vh;
 }
