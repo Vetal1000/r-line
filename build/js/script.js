@@ -6,6 +6,34 @@ toggler.onclick = function(e){
   document.getElementById('burger').classList.toggle('burger-menu--visible');
 }
 
+var toggler1 = document.getElementById('toggler--1');
+toggler1.onclick = function(e){
+  e.preventDefault();
+  toggler1.classList.toggle('toggler--close');
+  document.getElementById('burger--1').classList.toggle('burger-menu--visible');
+}
+
+var toggler2 = document.getElementById('toggler--2');
+toggler2.onclick = function(e){
+  e.preventDefault();
+  toggler2.classList.toggle('toggler--close');
+  document.getElementById('burger--2').classList.toggle('burger-menu--visible');
+}
+
+var toggler5 = document.getElementById('toggler--5');
+toggler5.onclick = function(e){
+  e.preventDefault();
+  toggler5.classList.toggle('toggler--close');
+  document.getElementById('burger--5').classList.toggle('burger-menu--visible');
+}
+
+var toggler6 = document.getElementById('toggler--6');
+toggler6.onclick = function(e){
+  e.preventDefault();
+  toggler6.classList.toggle('toggler--close');
+  document.getElementById('burger--6').classList.toggle('burger-menu--visible');
+}
+
 // Фоновое видео
 
 $(document).ready(function(){
@@ -4020,3 +4048,129 @@ componentHandler.register({
     widget: false
 });
 }());
+
+
+//Счетчик
+
+(function ($) {
+  $.fn.countTo = function (options) {
+    options = options || {};
+
+    return $(this).each(function () {
+      // set options for current element
+      var settings = $.extend({}, $.fn.countTo.defaults, {
+        from:            $(this).data('from'),
+        to:              $(this).data('to'),
+        speed:           $(this).data('speed'),
+        refreshInterval: $(this).data('refresh-interval'),
+        decimals:        $(this).data('decimals')
+      }, options);
+
+      // how many times to update the value, and how much to increment the value on each update
+      var loops = Math.ceil(settings.speed / settings.refreshInterval),
+        increment = (settings.to - settings.from) / loops;
+
+      // references & variables that will change with each update
+      var self = this,
+        $self = $(this),
+        loopCount = 0,
+        value = settings.from,
+        data = $self.data('countTo') || {};
+
+      $self.data('countTo', data);
+
+      // if an existing interval can be found, clear it first
+      if (data.interval) {
+        clearInterval(data.interval);
+      }
+      data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+      // initialize the element with the starting value
+      render(value);
+
+      function updateTimer() {
+        value += increment;
+        loopCount++;
+
+        render(value);
+
+        if (typeof(settings.onUpdate) == 'function') {
+          settings.onUpdate.call(self, value);
+        }
+
+        if (loopCount >= loops) {
+          // remove the interval
+          $self.removeData('countTo');
+          clearInterval(data.interval);
+          value = settings.to;
+
+          if (typeof(settings.onComplete) == 'function') {
+            settings.onComplete.call(self, value);
+          }
+        }
+      }
+
+      function render(value) {
+        var formattedValue = settings.formatter.call(self, value, settings);
+        $self.html(formattedValue);
+      }
+    });
+  };
+
+  $.fn.countTo.defaults = {
+    from: 0,               // the number the element should start at
+    to: 0,                 // the number the element should end at
+    speed: 1000,           // how long it should take to count between the target numbers
+    refreshInterval: 5,  // how often the element should be updated
+    decimals: 0,           // the number of decimal places to show
+    formatter: formatter,  // handler for formatting the value before rendering
+    onUpdate: null,        // callback method for every time the element is updated
+    onComplete: null       // callback method for when the element finishes updating
+  };
+
+  function formatter(value, settings) {
+    return value.toFixed(settings.decimals);
+  }
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('#count-number').data('countToOptions', {
+  formatter: function (value, options) {
+    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+  }
+  });
+
+  // start all the timers
+  $('.timer').each(count);
+
+  function count(options) {
+  var $this = $(this);
+  options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+  $this.countTo(options);
+  }
+});
+
+//Галерея лицензий
+
+$(document).ready(function() {
+    $("#license--1").fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+      });
+
+    $("#license--2").fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+    });
+
+    $("#license--3").fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+    });
+
+    $("#single_4").fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+    });
+});

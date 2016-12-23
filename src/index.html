@@ -10,16 +10,17 @@
 
 <body>
 
-<div class="promo  jquery-background-video-wrapper">
+<div class="promo  block  jquery-background-video-wrapper">
   <!-- добавить постер к видео!! -->
   <video class="promo__video  jquery-background-video" width height autoplay loop poster="...">
     <source src="img/bg-video--promo.mp4" type="video/mp4"></source>
   </video>
-  <div class="container  container--relative">
-    <header class="page-header">
+
+  <header class="page-header">
+    <div class="container  container--relative">
       <div class="logo">
         <a href="#">
-          <img src="http://placehold.it/200x90" alt="Логотип">
+          <img src="img/logo.svg" alt="Логотип">
         </a>
       </div>
 
@@ -28,113 +29,439 @@
       </div>
 
       <a href="#" class="toggler" id="toggler"><span></span></a>
-      <div class="burger-menu" id="burger">
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
-            <li class="main-nav__list-item"><a href="#">О нас</a></li>
-            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
-            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
-            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
-            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+    </div>
 
-        <div class="burger-menu__contacts">
-          <a href="mailto:np@rline.ru">np@rline.ru</a>
-          <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+    <div class="burger-menu" id="burger">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+          <li class="main-nav__list-item"><a href="#">О нас</a></li>
+          <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+          <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+          <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+          <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu__contacts">
+        <a href="mailto:np@rline.ru">np@rline.ru</a>
+        <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+      </div>
+
+      <form class="callback-form" action="#">
+        <legend class="callback-form__title">Обратный звонок</legend>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">ФИО</label>
         </div>
 
-        <form class="callback-form" action="#">
-          <legend class="callback-form__title">Обратный звонок</legend>
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">ФИО</label>
-          </div>
-
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">Компания</label>
-          </div>
-
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">+7 ()</label>
-          </div>
-
-          <input type="submit" value="Заказать">
-        </form>
-      </div>
-    </header>
-
-    <div class="promo-info-wrap">
-      <div class="promo-info">
-        <h1 class="promo-info__title">Таможенный брокер Р&#8209;Лайн&nbsp;Фуд</h1>
-        <p class="promo-info__descr">
-          Коммерческая группа по работе с&nbsp;пищевой и непищевой химией, ингредиентами, сырьем, готовыми продуктами
-        </p>
-      </div>
-    </div>
-    </div>
-  </div>
-
-<div class="offers">
-  <div class="container  container--relative">
-    <header class="page-header  page-header--orange">
-      <div class="logo">
-        <a href="#">
-          <img src="http://placehold.it/200x90" alt="Логотип">
-        </a>
-      </div>
-
-      <div class="phone">
-        <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
-      </div>
-
-      <a href="#" class="toggler" id="toggler"><span></span></a>
-      <div class="burger-menu" id="burger">
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
-            <li class="main-nav__list-item"><a href="#">О нас</a></li>
-            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
-            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
-            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
-            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <div class="burger-menu__contacts">
-          <a href="mailto:np@rline.ru">np@rline.ru</a>
-          <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Компания</label>
         </div>
 
-        <form class="callback-form" action="#">
-          <legend class="callback-form__title">Обратный звонок</legend>
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">ФИО</label>
-          </div>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+        </div>
 
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">Компания</label>
-          </div>
+        <input type="submit" value="Заказать">
+      </form>
+    </div>
+  </header>
 
-          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">+7 ()</label>
-          </div>
-
-          <input type="submit" value="Заказать">
-        </form>
+  <div class="promo-content">
+    <div class="container container--relative">
+      <div class="row">
+        <div class="promo-info">
+          <h1 class="promo-info__title">Таможенный брокер Р&#8209;Лайн&nbsp;Фуд</h1>
+          <p class="promo-info__descr">
+            Коммерческая группа по работе с&nbsp;пищевой и непищевой химией, ингредиентами, сырьем, готовыми продуктами
+          </p>
+        </div>
       </div>
-    </header>
+    </div>
   </div>
 </div>
 
+
+<section class="offers  block">
+  <header class="page-header">
+    <div class="container  container--relative">
+      <div class="logo">
+        <a href="#">
+          <img src="http://placehold.it/200x90" alt="Логотип">
+        </a>
+      </div>
+
+      <div class="phone  phone--orange  phone--light-fw">
+        <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+      </div>
+
+      <a href="#" class="toggler  toggler--orange" id="toggler--1"><span></span></a>
+    </div>
+
+    <div class="burger-menu" id="burger--1">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+          <li class="main-nav__list-item"><a href="#">О нас</a></li>
+          <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+          <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+          <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+          <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu__contacts">
+        <a href="mailto:np@rline.ru">np@rline.ru</a>
+        <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+      </div>
+
+      <form class="callback-form" action="#">
+        <legend class="callback-form__title">Обратный звонок</legend>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">ФИО</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Компания</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+        </div>
+
+        <input type="submit" value="Заказать">
+      </form>
+    </div>
+  </header>
+
+  <div class="offers-content">
+    <div class="container">
+
+      <h2 class="section-title">Предложения</h2>
+
+      <p class="section-descr">
+        Вы можете воспользоваться каждой опцией по-отдельности или заказать услугу «под ключ»
+      </p>
+
+      <div class="features-items-wrap">
+        <div class="features-item">
+          <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+          <p class="features-item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          </p>
+        </div>
+
+        <div class="features-item">
+          <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+          <p class="features-item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          </p>
+        </div>
+
+        <div class="features-item">
+          <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+          <p class="features-item__text">
+            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="about-us  block">
+  <header class="page-header">
+    <div class="container  container--relative">
+      <div class="row">
+        <div class="logo">
+          <a href="#">
+            <img src="http://placehold.it/200x90" alt="Логотип">
+          </a>
+        </div>
+      </div>
+      <a href="#" class="toggler  toggler--orange" id="toggler--2"><span></span></a>
+    </div>
+
+    <div class="burger-menu" id="burger--2">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+          <li class="main-nav__list-item"><a href="#">О нас</a></li>
+          <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+          <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+          <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+          <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu__contacts">
+        <a href="mailto:np@rline.ru">np@rline.ru</a>
+        <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+      </div>
+
+      <form class="callback-form" action="#">
+        <legend class="callback-form__title">Обратный звонок</legend>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">ФИО</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Компания</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+        </div>
+
+        <input type="submit" value="Заказать">
+      </form>
+    </div>
+  </header>
+
+  <div class="about-us__content  container-fluid">
+    <div class="row">
+      <div class="statistics">
+        <h2 class="section-title  section-title--white">О нас</h2>
+        <ul class="statistics-list">
+          <li class="counter">
+            <span class="statistics-list__number  timer  count-title" id="count-number" data-to="18" data-speed="1000"></span>
+            <span class="statistics-list__text  count-text">
+              лет на рынке логистики и таможенного оформления
+            </span>
+          </li>
+          <li class="counter">
+            <span class="statistics-list__number  timer  count-title" id="count-number" data-to="500" data-speed="1000"></span>
+            <span class="statistics-list__text  count-text">
+              и более деклараций ежемесячно
+            </span>
+          </li>
+          <li class="counter">
+            <span class="statistics-list__number  timer  count-title" id="count-number" data-to="95" data-speed="1000"></span><span class="statistics-list__number">%</span>
+            <span class="statistics-list__text  count-text">
+              возврата уплаченных обеспечений
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="quotation">
+        <blockquote class="quotation__text">
+          Наша цель – стать компанией, которая не только удовлетворяет потребности клиента и выполняет, что обещала, а предвосхищает его желания и никогда не обманывает даже ожиданий.
+          Что является залогом построения такой компании? Помимо эффективных техпроцессов, высокого профессионализма сотрудников и детального знания рынка? Главная задача – привлечение и воспитание увлеченных, неравнодушных людей. Для кого профессия – это не ремесло, а искусство. Кто стремится сделать все для клиента не потому, что тот платит деньги, а потому, что быть лучшим  есть потребность самого сотрудника…
+          <p class="quotation__signature">
+            <cite>Генеральный директор АО «Компании Р-Лайн» Агафонов А.Н.</cite>
+          </p>
+        </blockquote>
+      </div>
+
+      <div class="about-us__gallery">
+        <img src="http://placehold.it/335x200" alt="">
+        <img src="http://placehold.it/335x200" alt="">
+        <img src="http://placehold.it/335x200" alt="">
+      </div>
+  </div>
+
+    </div>
+</section>
+
+
+<section class="shipment  block">
+</section>
+
+
+<section class="benefits  block">
+  <header class="page-header">
+      <div class="container  container--relative">
+        <div class="logo">
+          <a href="#">
+            <img src="http://placehold.it/200x90" alt="Логотип">
+          </a>
+        </div>
+
+        <div class="phone  phone--orange  phone--light-fw">
+          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+        </div>
+
+        <a href="#" class="toggler  toggler--orange" id="toggler--5"><span></span></a>
+      </div>
+
+      <div class="burger-menu" id="burger--5">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+            <li class="main-nav__list-item"><a href="#">О нас</a></li>
+            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu__contacts">
+          <a href="mailto:np@rline.ru">np@rline.ru</a>
+          <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+        </div>
+
+        <form class="callback-form" action="#">
+          <legend class="callback-form__title">Обратный звонок</legend>
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">ФИО</label>
+          </div>
+
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Компания</label>
+          </div>
+
+          <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+          </div>
+
+          <input type="submit" value="Заказать">
+        </form>
+      </div>
+  </header>
+
+  <div class="benefits__content  container">
+    <h2 class="section-title">Почему мы?</h2>
+    <div class="features-items-wrap">
+      <div class="features-item">
+        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <p class="features-item__text">
+          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+        </p>
+      </div>
+
+      <div class="features-item">
+        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <p class="features-item__text">
+          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+        </p>
+      </div>
+
+      <div class="features-item">
+        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <p class="features-item__text">
+          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="license  block">
+  <header class="page-header">
+    <div class="container  container--relative">
+      <div class="row">
+        <div class="logo">
+          <a href="#">
+            <img src="http://placehold.it/200x90" alt="Логотип">
+          </a>
+        </div>
+
+        <div class="phone  phone--light-fw">
+          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+        </div>
+
+        <a href="#" class="toggler" id="toggler--6"><span></span></a>
+      </div>
+    </div>
+
+    <div class="burger-menu" id="burger--6">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+          <li class="main-nav__list-item"><a href="#">О нас</a></li>
+          <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+          <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+          <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+          <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu__contacts">
+        <a href="mailto:np@rline.ru">np@rline.ru</a>
+        <a href="tel:8 (812) 642-27-52">8 (812) 642-27-52</a>
+      </div>
+
+      <form class="callback-form" action="#">
+        <legend class="callback-form__title">Обратный звонок</legend>
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">ФИО</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Компания</label>
+        </div>
+
+        <div class="mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">+7 ()</label>
+        </div>
+
+        <input type="submit" value="Заказать">
+      </form>
+    </div>
+  </header>
+
+  <div class="license__content">
+  <div class="container">
+    <h2 class="section-title  section-title--white">Лицензии</h2>
+  </div>
+  <div class="license-gallery">
+        <div class="license-gallery__container">
+        <div class="row">
+          <div class="license-gallery__item">
+            <a id="license--1" href="http://farm9.staticflickr.com/8140/30366640446_eb359921c5_b.jpg">
+              <img src="img/logo wihte@3x.svg" width="200" height="90" alt="" />
+            </a>
+          </div>
+
+          <div class="license-gallery__item">
+            <a id="license--2" href="http://farm9.staticflickr.com/8140/30366640446_eb359921c5_b.jpg">
+              <img src="img/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="license-gallery__item">
+            <a id="license--3" href="http://farm9.staticflickr.com/8140/30366640446_eb359921c5_b.jpg">
+              <img src="http://placehold.it/240x340" alt="" />
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+  </div>
+
+</section>
+
+<section class="contacts">
+
+</section>
+
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/script.js"></script>
 <script src="js/jquery.background-video.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/script.js"></script>
+
 </body>
 </html>

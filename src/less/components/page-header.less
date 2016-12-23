@@ -28,18 +28,6 @@
   .make-row();
   position: relative;
   z-index: 100;
-
-  &--orange {
-    .toggler > span {
-      background: @active-color--dark;
-
-      &:before,
-      &:after {
-        background: @active-color--dark;
-      }
-    }
-
-  }
 }
 
 .container--relative {
@@ -57,6 +45,18 @@
   a {
     .h3();
     color: @text-color--light;
+  }
+
+  &--orange {
+    a {
+      color: @active-color;
+    }
+  }
+
+  &--light-fw {
+    a {
+      font-weight: @font-weight--light;
+    }
   }
 }
 
@@ -103,16 +103,26 @@
     }
   }
 
+  &--orange {
+    > span {
+      background-color: @active-color;
+
+      &:before,
+      &:after {
+        background-color: @active-color;
+      }
+    }
+  }
+
   &--close {
     > span {
-      transition: background .3s 0;
       background: transparent;
 
       &:before,
       &:after {
         transition: top .3s, transform .3s .5s;
         top: 0;
-        background: @active-color--dark;
+        background: @active-color;
       }
 
       &:before {
@@ -132,6 +142,7 @@
   top: 0;
   right: 0;
   width: 30%;
+  height: 100vh;
   padding-top: 80px;
   padding-right: 25px;
   padding-left: 25px;

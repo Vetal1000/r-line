@@ -57,11 +57,21 @@ p {
   margin: 0;
 }
 
-.promo {
+.block {
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.promo {
   background-color: @bg-color--promo;
 }
 
-.offers {
-  height: 100vh;
+.section-title {
+  .h1();
+  color: @active-color;
+
+  &--white {
+    color: @text-color--light;
+  }
 }
