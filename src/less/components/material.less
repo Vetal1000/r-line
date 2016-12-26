@@ -1,12 +1,15 @@
 .mdl-textfield {
   position: relative;
-  font-size: @font-size;
+  font-size: 14px;
   display: inline-block;
   box-sizing: border-box;
-  width: 300px;
+  width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 20px 0; }
+  padding: 0;
+  padding-top: 11px;
+  padding-bottom: 3px;
+}
 
   .mdl-textfield .mdl-button {
     position: absolute;
@@ -27,9 +30,9 @@
 
 .mdl-textfield__input {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0, 0.12);
+  border-bottom: 1px solid @grey--light;
   display: block;
-  font-size: 16px;
+  font-size: @font-size;
   font-family: @font-family;
   margin: 0;
   padding: 4px 0;
@@ -58,14 +61,14 @@
 
 .mdl-textfield__label {
   bottom: 0;
-  color: @grey--light;
-  font-size: 16px;
+  color: @text-color;
+  font-size: 14px;
   left: 0;
   right: 0;
   pointer-events: none;
   position: absolute;
   display: block;
-  top: 24px;
+  top: 16px;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -97,9 +100,9 @@
     font-size: 12px; }
   .mdl-textfield__label:after {
     background-color: @active-color--dark;
-    bottom: 20px;
+    bottom: 3px;
     content: '';
-    height: 2px;
+    height: 1px;
     left: 45%;
     position: absolute;
     transition-duration: 0.2s;

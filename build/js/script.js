@@ -4174,3 +4174,46 @@ $(document).ready(function() {
       closeEffect : 'elastic',
     });
 });
+
+//карта
+
+// карта
+
+var points = [
+  // Найти координаты: http://www.mapcoordinates.net/ru
+  {lat: 59.9322195, lng: 30.3241536}
+];
+
+// var images = [
+//   'img/sprite/icon-map-pointer.png'
+// ];
+
+$.ajax({
+  url: 'https://maps.googleapis.com/maps/api/js',
+    dataType: 'jsonp',
+  jsonp: 'callback',
+  data: {
+    key: 'AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk',
+    signed_in: true
+  },
+  success: mapInit
+});
+
+function mapInit() {
+  var map = new google.maps.Map($('#map').get(0), {
+    center: {lat: 59.9322195, lng: 30.3241536},
+    zoom: 16,
+    // disableDefaultUI: true,
+    scrollwheel: false,
+  });
+
+  var markers = [];
+
+  points.forEach(function (position, i) {
+    markers.push(new google.maps.Marker({
+      position: position,
+      map: map,
+      icon: images[i]
+    }));
+  });
+}

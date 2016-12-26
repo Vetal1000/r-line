@@ -1,33 +1,11 @@
-.promo {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 1;
-  }
-}
-
-.promo__video {
-  z-index: 0;
-
-  @media (max-width: @screen-sm) {
-    display: none;
-  }
-}
-
 .page-header {
-  .make-row();
   position: relative;
   z-index: 100;
+  padding-top: 22px;
+
+  &--section {
+    margin-bottom: 36px;
+  }
 }
 
 .container--relative {
@@ -36,11 +14,17 @@
 
 .logo {
   .make-lg-column(3);
+  padding-top: 8px;
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .make-md-column(3);
+  }
 }
 
 .phone {
   .make-lg-column(3);
   .make-lg-column-offset(5);
+  text-align: right;
 
   a {
     .h3();
@@ -58,17 +42,22 @@
       font-weight: @font-weight--light;
     }
   }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .make-md-column(3);
+    .make-md-column-offset(5);
+  }
 }
 
 .toggler {
   position: absolute;
   z-index: 110;
-  top: 0;
+  top: 6px;
   right: 10px;
   display: flex;
   align-items: center;
   width: 37px;
-  height: 3em;
+  height: 30px;
   user-select: none;
 
   > span {
@@ -95,11 +84,11 @@
     }
 
     &:before {
-      top: 10px;
+      top: 13px;
     }
 
     &:after {
-      top: -10px;
+      top: -13px;
     }
   }
 
@@ -141,9 +130,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 23.9285%;
   height: 100vh;
-  padding-top: 80px;
+  padding-top: 83px;
   padding-right: 25px;
   padding-left: 25px;
   background-color: @grey;
@@ -159,15 +148,15 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 13px;
 }
 
 .main-nav__list-item {
     display: block;
+    padding-bottom: 6px;
 
-    &:first-child {
-      a {
-        padding-right: 3em;
-      }
+    &:last-child {
+      padding-bottom: 0;
     }
 
     a {
@@ -184,7 +173,38 @@
   }
 
 .burger-menu__contacts {
+  margin-bottom: 30px;
+
   a {
     display: block;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
+
+.callback-form {
+  width: 75.6865%;
+}
+
+.callback-form__title {
+  .h4();
+}
+
+.callback-form__field label {
+  white-space: pre;
+}
+
+.callback-form__submit {
+  margin-top: 18px;
+  background-color: @active-color;
+  font-size: @font-size;
+  color: @text-color--light;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+

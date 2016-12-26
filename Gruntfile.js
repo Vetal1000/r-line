@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         },
         files: {
           // в какой файл, из какого файла
-          'build/css/style.css': ['src/less/style.less']
+          'build/css/style.css': ['src/less/style.less'],
+          'build/css/normalize.css': ['src/less/bootstrap/normalize.less']
         },
       }
     },

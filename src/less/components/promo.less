@@ -1,5 +1,29 @@
+.promo {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+  }
+}
+
+.promo__video {
+  z-index: 0;
+
+  @media (max-width: @screen-sm) {
+    display: none;
+  }
+}
+
 .promo-content {
-  padding-top: 180px;
+  padding-top: 190px;
 }
 
 .promo-info {
@@ -8,7 +32,7 @@
 }
 
 .promo-info {
-  .make-lg-column(4);
+  .make-lg-column(7);
 }
 
 .promo-info__title {

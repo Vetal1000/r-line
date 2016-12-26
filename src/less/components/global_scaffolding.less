@@ -48,12 +48,50 @@ textarea {
   line-height: inherit;
 }
 
+input {
+  outline: none;
+  color: inherit;
+  margin: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 p {
+  margin: 0;
+}
+
+blockquote {
   margin: 0;
 }
 
@@ -70,8 +108,17 @@ p {
 .section-title {
   .h1();
   color: @active-color;
+  margin-bottom: 70px;
+
+  &--small-mg {
+    margin-bottom: 10px;
+  }
 
   &--white {
     color: @text-color--light;
   }
+}
+
+.section-descr {
+  margin-bottom: 95px;
 }

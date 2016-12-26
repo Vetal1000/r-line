@@ -4174,3 +4174,43 @@ $(document).ready(function() {
       closeEffect : 'elastic',
     });
 });
+
+//карта
+
+// Определение точных координат: http://www.mapcoordinates.net/ru
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: {lat: 59.95016094, lng: 30.31612718}
+  });
+
+  setMarkers(map);
+}
+
+// Одна или несколько точек на карте
+var points = [
+  ['ФлугерЪ', 59.95016094, 30.31612718],
+];
+
+function setMarkers(map) {
+  // Добавляем маркер на карту
+  var image = {
+    url: 'http://s1.iconbird.com/ico/2013/8/425/w128h12813771935056.png',
+    // Эта картинка 128×128 пикселей.
+    // Точка «упора» нарисованного маркера по горизонтали — середина
+    // Точка «упора» нарисованного маркера по вертикали в 11 пикселях от нижнего края картинки
+    size: new google.maps.Size(128, 128),
+    anchor: new google.maps.Point(64, 117) // 128 / 2 (горизонталь) и 128 - 11 (вертикаль)
+  };
+
+  for (var i = 0; i < points.length; i++) {
+    var point = points[i];
+    var marker = new google.maps.Marker({
+      position: {lat: point[1], lng: point[2]},
+      map: map,
+      icon: image,
+      title: point[0]
+    });
+  }
+}
