@@ -20,6 +20,20 @@ toggler2.onclick = function(e){
   document.getElementById('burger--2').classList.toggle('burger-menu--visible');
 }
 
+var toggler3 = document.getElementById('toggler--3');
+toggler3.onclick = function(e){
+  e.preventDefault();
+  toggler3.classList.toggle('toggler--close');
+  document.getElementById('burger--3').classList.toggle('burger-menu--visible');
+}
+
+var toggler4 = document.getElementById('toggler--4');
+toggler4.onclick = function(e){
+  e.preventDefault();
+  toggler4.classList.toggle('toggler--close');
+  document.getElementById('burger--4').classList.toggle('burger-menu--visible');
+}
+
 var toggler5 = document.getElementById('toggler--5');
 toggler5.onclick = function(e){
   e.preventDefault();
@@ -4177,43 +4191,41 @@ $(document).ready(function() {
 
 //карта
 
-// карта
+// When the window has finished loading create our google map below
+  google.maps.event.addDomListener(window, 'load', init);
 
-var points = [
-  // Найти координаты: http://www.mapcoordinates.net/ru
-  {lat: 59.9322195, lng: 30.3241536}
-];
+  function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+          // How zoomed in you want the map to start at (always required)
+          zoom: 14,
 
-// var images = [
-//   'img/sprite/icon-map-pointer.png'
-// ];
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(59.97705207, 30.31907086),
 
-$.ajax({
-  url: 'https://maps.googleapis.com/maps/api/js',
-    dataType: 'jsonp',
-  jsonp: 'callback',
-  data: {
-    key: 'AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk',
-    signed_in: true
-  },
-  success: mapInit
-});
+          scrollwheel: false,
 
-function mapInit() {
-  var map = new google.maps.Map($('#map').get(0), {
-    center: {lat: 59.9322195, lng: 30.3241536},
-    zoom: 16,
-    // disableDefaultUI: true,
-    scrollwheel: false,
-  });
+          // How you would like to style the map.
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff6800"},{"saturation":"20"},{"lightness":"-8"},{"gamma":"1.00"},{"weight":"1.12"}]}]
+      };
 
-  var markers = [];
+      // Get the HTML DOM element that will contain your map
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
 
-  points.forEach(function (position, i) {
-    markers.push(new google.maps.Marker({
-      position: position,
-      map: map,
-      icon: images[i]
-    }));
-  });
-}
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(59.98078809, 30.32173161),
+          map: map
+      });
+  }
+
+
+
+
+

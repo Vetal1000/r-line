@@ -20,6 +20,20 @@ toggler2.onclick = function(e){
   document.getElementById('burger--2').classList.toggle('burger-menu--visible');
 }
 
+var toggler3 = document.getElementById('toggler--3');
+toggler3.onclick = function(e){
+  e.preventDefault();
+  toggler3.classList.toggle('toggler--close');
+  document.getElementById('burger--3').classList.toggle('burger-menu--visible');
+}
+
+var toggler4 = document.getElementById('toggler--4');
+toggler4.onclick = function(e){
+  e.preventDefault();
+  toggler4.classList.toggle('toggler--close');
+  document.getElementById('burger--4').classList.toggle('burger-menu--visible');
+}
+
 var toggler5 = document.getElementById('toggler--5');
 toggler5.onclick = function(e){
   e.preventDefault();
@@ -4177,40 +4191,41 @@ $(document).ready(function() {
 
 //карта
 
-// Определение точных координат: http://www.mapcoordinates.net/ru
+// When the window has finished loading create our google map below
+  google.maps.event.addDomListener(window, 'load', init);
 
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
-    center: {lat: 59.95016094, lng: 30.31612718}
-  });
+  function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+          // How zoomed in you want the map to start at (always required)
+          zoom: 14,
 
-  setMarkers(map);
-}
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(59.97705207, 30.31907086),
 
-// Одна или несколько точек на карте
-var points = [
-  ['ФлугерЪ', 59.95016094, 30.31612718],
-];
+          scrollwheel: false,
 
-function setMarkers(map) {
-  // Добавляем маркер на карту
-  var image = {
-    url: 'http://s1.iconbird.com/ico/2013/8/425/w128h12813771935056.png',
-    // Эта картинка 128×128 пикселей.
-    // Точка «упора» нарисованного маркера по горизонтали — середина
-    // Точка «упора» нарисованного маркера по вертикали в 11 пикселях от нижнего края картинки
-    size: new google.maps.Size(128, 128),
-    anchor: new google.maps.Point(64, 117) // 128 / 2 (горизонталь) и 128 - 11 (вертикаль)
-  };
+          // How you would like to style the map.
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff6800"},{"saturation":"20"},{"lightness":"-8"},{"gamma":"1.00"},{"weight":"1.12"}]}]
+      };
 
-  for (var i = 0; i < points.length; i++) {
-    var point = points[i];
-    var marker = new google.maps.Marker({
-      position: {lat: point[1], lng: point[2]},
-      map: map,
-      icon: image,
-      title: point[0]
-    });
+      // Get the HTML DOM element that will contain your map
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(59.98078809, 30.32173161),
+          map: map
+      });
   }
-}
+
+
+
+
+

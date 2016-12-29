@@ -16,10 +16,14 @@ html {
 body {
   margin: 0;
   font-family: @font-family;
-  font-size: @font-size;
+  font-size: @font-size--small;
   line-height: @line-height;
   color: @text-color;
   font-weight: @font-weight;
+
+  @media (min-width: @screen-lg) {
+    font-size: @font-size;
+  }
 }
 
 a {
@@ -34,7 +38,6 @@ a {
 }
 
 img {
-  max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
@@ -96,9 +99,16 @@ blockquote {
 }
 
 .block {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+
+  @media (min-width: @screen-md) and (max-width: @screen-md) {
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  @media (min-width: @screen-lg) {
+    min-height: 700px;
+  }
 }
 
 .promo {
@@ -108,17 +118,19 @@ blockquote {
 .section-title {
   .h1();
   color: @active-color;
-  margin-bottom: 70px;
-
-  &--small-mg {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 8.6666%;
+  text-align: left;
 
   &--white {
     color: @text-color--light;
   }
+
 }
 
 .section-descr {
-  margin-bottom: 95px;
+  margin-bottom: 55px;
+
+  @media (min-width: @screen-md) {
+    margin-bottom: 95px;
+  }
 }

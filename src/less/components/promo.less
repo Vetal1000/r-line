@@ -1,5 +1,10 @@
 .promo {
   position: relative;
+  padding-bottom: 15.8894%;
+  background: url(../../img/bg-promo.jpg) @bg-color--promo;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 
   &:after {
     content: '';
@@ -15,7 +20,7 @@
 }
 
 .promo__video {
-  z-index: 0;
+  z-index: 1;
 
   @media (max-width: @screen-sm) {
     display: none;
@@ -23,7 +28,7 @@
 }
 
 .promo-content {
-  padding-top: 190px;
+  padding-top: 20.7142%;
 }
 
 .promo-info {
@@ -31,15 +36,32 @@
   color: @text-color--light;
 }
 
-.promo-info {
-  .make-lg-column(7);
-}
-
 .promo-info__title {
   .h1();
-  margin-bottom: 20px;
+  .make-xs-column(12);
+  margin-bottom: 15px;
+  z-index: 10;
+
+  @media (min-width: @screen-sm) {
+    .make-sm-column(9);
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @screen-lg) {
+    .make-lg-column(7);
+    margin-bottom: 33px;
+  }
 }
 
 .promo-info__descr {
-  padding-right: 40px;
+  .make-xs-column(10);
+  z-index: 10;
+
+  @media (min-width: @screen-sm) {
+    .make-sm-column(5);
+  }
+
+  @media (min-width: @screen-lg) {
+    .make-lg-column(4);
+  }
 }

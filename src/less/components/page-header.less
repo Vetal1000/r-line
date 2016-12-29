@@ -4,7 +4,7 @@
   padding-top: 22px;
 
   &--section {
-    margin-bottom: 36px;
+    margin-bottom: 2.7142%;
   }
 }
 
@@ -13,19 +13,28 @@
 }
 
 .logo {
-  .make-lg-column(3);
+  .make-xs-column(10);
   padding-top: 8px;
 
-  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  img {
+    width: 71%;
+  }
+
+  @media (min-width: @screen-sm) {
+    .make-sm-column(5);
+  }
+
+  @media (min-width: @screen-md) {
     .make-md-column(3);
+  }
+
+  @media (min-width: @screen-lg) {
+    .make-lg-column(3);
   }
 }
 
 .phone {
-  .make-lg-column(3);
-  .make-lg-column-offset(5);
-  text-align: right;
-
+    padding-top: 3px;
   a {
     .h3();
     color: @text-color--light;
@@ -37,22 +46,26 @@
     }
   }
 
-  &--light-fw {
-    a {
-      font-weight: @font-weight--light;
+  @media (min-width: @screen-sm) {
+    .make-sm-column(5);
+    text-align: right;
     }
-  }
 
-  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  @media (min-width: @screen-md) {
     .make-md-column(3);
     .make-md-column-offset(5);
+  }
+
+  @media (min-width: @screen-lg) {
+    .make-lg-column(3);
+    .make-lg-column-offset(5);
   }
 }
 
 .toggler {
   position: absolute;
   z-index: 110;
-  top: 6px;
+  top: 7px;
   right: 10px;
   display: flex;
   align-items: center;
@@ -130,9 +143,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 23.9285%;
-  height: 100vh;
-  padding-top: 83px;
+  width: 100%;
+  padding-top: 82px;
+  padding-bottom: 20px;
   padding-right: 25px;
   padding-left: 25px;
   background-color: @grey;
@@ -141,6 +154,20 @@
 
   &--visible {
     display: block;
+  }
+
+  @media (min-width: @screen-sm) {
+    width: 50%;
+  }
+
+  @media (min-width: @screen-md) {
+    width: 27%;
+    height: 100vh;
+    min-height: 700px;
+  }
+
+  @media (min-width: @screen-lg) {
+    width: 24%;
   }
 }
 

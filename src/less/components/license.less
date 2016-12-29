@@ -1,23 +1,97 @@
 .license {
   background-color: @active-color;
-}
+  color: @text-color--light;
+  padding-bottom: 2.6666%;
 
-.license-gallery__container {
-  width: 1000px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0 auto;
+  .section-title {
+    margin-bottom: 2.6666%;
+  }
 }
 
 .license-gallery__item {
-  .make-lg-column(4);
+  .make-xs-column(12);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
 
-  &:nth-child(3n) {
-    text-align: right;
+  img {
+    padding-bottom: 15px;
   }
 
-  &:nth-child(3n+2) {
-    text-align: center;
+  @media (min-width: @screen-sm) {
+    .make-sm-column(12);
+
   }
 }
+
+@media (min-width: @screen-md) {
+
+  .license-gallery__item {
+
+    &:nth-child(3n) {
+      text-align: right;
+
+      figcaption {
+        padding-left: 60px;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      text-align: left;
+    }
+
+    &:nth-child(3n+2) {
+      text-align: center;
+
+      figcaption {
+        padding-left: 30px;
+      }
+    }
+
+    figcaption {
+      text-align: left;
+
+    }
+  }
+}
+
+@media (min-width: @screen-lg) {
+
+  .license-gallery__item {
+
+    &:nth-child(3n) {
+      text-align: right;
+
+      figcaption {
+        padding-left: 70px;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      text-align: left;
+    }
+
+    &:nth-child(3n+2) {
+      text-align: center;
+
+      figcaption {
+        padding-left: 40px;
+      }
+    }
+
+    figcaption {
+      text-align: left;
+
+    }
+  }
+}
+
+  .license-gallery__container {
+    @media (min-width: @screen-lg) {
+      width: 1000px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 auto;
+    }
+  }
 

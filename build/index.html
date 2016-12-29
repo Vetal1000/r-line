@@ -2,17 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>R-line</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <div class="promo  block  jquery-background-video-wrapper">
-  <!-- добавить постер к видео!! -->
-  <video class="promo__video  jquery-background-video" width height autoplay loop poster="...">
+  <video class="promo__video  jquery-background-video" width height autoplay loop poster="img/bg-promo.jpg">
     <source src="img/bg-video--promo.mp4" type="video/mp4"></source>
   </video>
 
@@ -20,13 +20,11 @@
     <div class="container  container--relative">
       <div class="row">
         <div class="logo">
-          <a href="#">
-            <img src="img/LOGO_fin_white.png" width="200" height="90" alt="Логотип">
-          </a>
+          <img src="img/logo.svg" alt="Логотип Р-Лайн">
         </div>
 
-        <div class="phone">
-          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+        <div class="phone  hidden-xs">
+          <a href="tel:+78120000000">8 (812) 000-00-00</a>
         </div>
 
         <a href="#" class="toggler" id="toggler"><span></span></a>
@@ -74,11 +72,16 @@
 
   <div class="promo-content">
     <div class="container container--relative">
-      <div class="row">
-        <div class="promo-info">
+      <div class="promo-info">
+        <div class="row">
           <h1 class="promo-info__title">Таможенное оформление Международные перевозки</h1>
+        </div>
+
+        <div class="row">
           <p class="promo-info__descr">
-            Коммерческая группа по работе с&nbsp;пищевой и непищевой химией, ингредиентами, сырьем, готовыми продуктами
+            Пищевая и промышленная химия,
+            сырьё,&nbsp;ингредиенты, корма,
+            продукты&nbsp;растительного происхождения
           </p>
         </div>
       </div>
@@ -92,13 +95,11 @@
     <div class="container  container--relative">
       <div class="row">
         <div class="logo">
-          <a href="#">
-            <img src="img/LOGO_fin.png" width="200" height="200" alt="Логотип">
-          </a>
+          <img src="img/logo--orange.svg" alt="Логотип Р-Лайн">
         </div>
 
-        <div class="phone  phone--orange  phone--light-fw">
-          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+        <div class="phone  phone--orange  hidden-xs">
+          <a href="tel:+78120000000">8 (812) 000-00-00</a>
         </div>
 
         <a href="#" class="toggler  toggler--orange" id="toggler--1"><span></span></a>
@@ -144,57 +145,176 @@
     </div>
   </header>
 
-  <div class="offers-content">
+  <div class="offers__content">
     <div class="container">
-
-      <h2 class="section-title  section-title--small-mg">Предложения</h2>
-
-      <p class="section-descr">
-        Вы можете воспользоваться каждой опцией по-отдельности или заказать услугу «под ключ»
-      </p>
+      <h2 class="section-title  offers__title">Предложения</h2>
 
       <div class="features-items-wrap">
         <div class="features-item">
-          <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+          <h3 class="features-item__title">Экспортно&#8209;импортная компания в Китае</h3>
           <p class="features-item__text">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+            Поиск товаров по&nbsp;заданию Клиента,
+            аудит качества, контроль отгрузки.
+            Работаем с&nbsp;самым крупным рынком
+            и&nbsp;производителями Китая.
           </p>
         </div>
 
         <div class="features-item">
           <h3 class="features-item__title">Качественная<br> логистика</h3>
           <p class="features-item__text">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+            Морские контейнерные перевозки.
+            Железнодорожные перевозки
+            с&nbsp;перегрузом и&nbsp;без.
+            Автотранспорт&nbsp;под&nbsp;любые задачи.
+            Удаленное&nbsp;декларирование.
           </p>
         </div>
 
         <div class="features-item">
-          <h3 class="features-item__title">Таможенное<br> оформление</h3>
+          <h3 class="features-item__title">Мы являемся<br> членами ФИАТА</h3>
           <p class="features-item__text">
-            Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          Домашние коносаменты на&nbsp;поточные
+          грузы из&nbsp;Китая, Турции, Индии
+          обеспечивают нашим клиентам
+          неоспоримые преимущества.
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 
 <section class="about-us  block">
-  <header class="page-header  page-header--section">
+  <div class="about-us__content">
+    <div class="container-fluid  container--custom">
+      <a href="#" class="toggler  toggler--custom" id="toggler--2"><span></span></a>
+      <div class="burger-menu" id="burger--2">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item"><a href="#">Предложения</a></li>
+            <li class="main-nav__list-item"><a href="#">О нас</a></li>
+            <li class="main-nav__list-item"><a href="#">Наши грузы</a></li>
+            <li class="main-nav__list-item"><a href="#">Почему мы</a></li>
+            <li class="main-nav__list-item"><a href="#">Лицензии</a></li>
+            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu__contacts">
+          <a href="mailto:np@rline.ru">np@rline.ru</a>
+          <a href="tel:88120000000">8 (812) 000-00-00</a>
+        </div>
+
+        <form class="callback-form" action="#">
+          <legend class="callback-form__title">Обратный звонок</legend>
+          <div class="callback-form__field  mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">ФИО</label>
+          </div>
+
+          <div class="callback-form__field  mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Компания</label>
+          </div>
+
+          <div class="callback-form__field  mdl-textfield  mdl-js-textfield  mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">+7 (   )</label>
+          </div>
+
+          <input class="callback-form__submit" type="submit" value="Заказать">
+        </form>
+      </div>
+
+      <div class="row">
+        <div class="statistics-wrap">
+          <div class="statistics">
+            <div class="logo--about-us">
+              <img src="img/logo.svg" alt="Логотип Р-Лайн">
+            </div>
+
+            <h2 class="section-title  section-title--white  section-title--about-us">О нас</h2>
+
+            <div class="statistics-item  counter">
+              <div class="statistics-item__number  timer  count-title" id="count-number" data-to="18" data-speed="1000"></div>
+              <p class="statistics-item__text  count-text">
+                лет на рынке логистики и&nbsp;таможенного оформления
+              </p>
+            </div>
+            <div class="statistics-item  counter">
+              <div class="statistics-item__number  timer  count-title" id="count-number" data-to="500" data-speed="1000"></div>
+              <p class="statistics-item__text  count-text">
+                и более деклараций<br>ежемесячно
+              </p>
+            </div>
+            <div class="statistics-item  counter">
+              <div class="statistics-item__number  statistics-item__number--row">
+                <div class="timer  count-title" id="count-number" data-to="95" data-speed="1000"></div><span>%</span>
+              </div>
+
+              <p class="statistics-item__text  count-text">
+                возврата уплаченных<br>обеспечений
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quotation">
+          <blockquote>
+            <p class="quotation__text">
+              Наша цель – стать компанией, которая не только удовлетворяет потребности клиента,
+              но и предвосхищает его желания.
+              Что является залогом построения такой компании?
+              Помимо эффективных техпроцессов, высокого
+              профессионализма сотрудников и детального знания
+              рынка?<br>
+              Главная задача – привлечение<br>
+              и воспитание увлеченных, неравнодушных людей.
+              Для кого профессия – это не ремесло,
+              а искусство. Кто стремится сделать все для клиента
+              не потому, что тот платит деньги,
+              а потому, что быть лучшим есть потребность самого
+              сотрудника…
+            </p>
+            <p class="quotation__signature">
+              <cite>Генеральный директор АО «Компании Р&#8209;Лайн»<br>Агафонов А.Н.</cite>
+            </p>
+          </blockquote>
+        </div>
+
+        <div class="about-us__gallery  hidden-xs  hidden-sm">
+          <img src="img/about-us-img1.jpg" srcset="img/about-us-img1--retina.jpg 2x" alt="О нас">
+          <img src="img/about-us-img2.jpg" srcset="img/about-us-img2--retina.jpg 2x" alt="О нас">
+          <img src="img/about-us-img3.jpg" srcset="img/about-us-img3--retina.jpg 2x" alt="О нас">
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="shipment  block">
+ <header class="page-header  page-header--section">
     <div class="container  container--relative">
       <div class="row">
         <div class="logo">
-          <a href="#">
-            <img src="img/LOGO_fin_white.png" width="200" height="90" alt="Логотип">
-          </a>
+          <img src="img/logo--orange.svg" alt="Логотип Р-Лайн">
         </div>
+
+        <div class="phone  phone--orange  hidden-xs">
+          <a href="tel:+78120000000">8 (812) 000-00-00</a>
+        </div>
+
+        <a href="#" class="toggler  toggler--orange" id="toggler--3"><span></span></a>
       </div>
-      <a href="#" class="toggler  toggler--orange" id="toggler--2"><span></span></a>
     </div>
 
-    <div class="burger-menu" id="burger--2">
+    <div class="burger-menu" id="burger--3">
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a href="#">Предложения</a></li>
@@ -232,94 +352,173 @@
       </form>
     </div>
   </header>
-
-  <div class="about-us__content  container-fluid">
-    <div class="row">
-      <div class="statistics">
-        <h2 class="section-title  section-title--white  section-title--small-mg">О нас</h2>
-
-        <table class="statistics-table">
-          <tr>
-            <td class="statistics-table__col1  counter">
-              <span class="statistics-table__number  timer  count-title" id="count-number" data-to="18" data-speed="1000"></span></td>
-            <td>
-              <span class="statistics-table__col2  statistics-table__text  count-text">
-                лет на рынке логистики и&nbsp;таможенного оформления
-              </span>
-            </td>
-          </tr>
-
-          <tr class="statistics-table__row2">
-            <td class="statistics-table__col1 counter">
-              <span class="statistics-table__number  timer  count-title" id="count-number" data-to="500" data-speed="1000"></span>
-            </td>
-            <td>
-              <span class="statistics-table__text  count-text">
-                и более деклараций<br>ежемесячно
-            </span>
-            </td>
-          </tr>
-
-          <tr class="statistics-table__row3">
-            <td class="statistics-table__col1  counter">
-              <span class="statistics-table__number  timer  count-title" id="count-number" data-to="95" data-speed="1000"></span><span class="statistics-table__number">%</span>
-            </td>
-            <td class="statistics-table__col2">
-              <span class="statistics-table__text  count-text">
-                возврата уплаченных<br>обеспечений
-            </span>
-            </td>
-          </tr>
-        </table>
+  <div class="shipment__content  container">
+    <h2 class="section-title">Наши грузы</h2>
+    <div class="row  shipment-item__row">
+      <div class="shipment-item">
+        <img src="img/shipment1.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 08, 12, 18, 20</h3>
+        <p class="shipment-item__descr">
+          орехи, сухофрукты,
+          замороженные
+          фрукты и овощи,
+          какао-бобы
+        </p>
       </div>
-
-      <div class="quotation">
-        <blockquote>
-          <p class="quotation__text">
-            Наша цель – стать компанией, которая не только удовлетворяет потребности клиента и выполняет, что обещала, а предвосхищает его желания и никогда не обманывает даже ожиданий.
-            Что является залогом построения такой компании? Помимо эффективных техпроцессов, высокого профессионализма сотрудников и детального знания рынка? Главная задача – привлечение и воспитание увлеченных, неравнодушных людей. Для кого профессия – это не ремесло, а искусство. Кто стремится сделать все для клиента не потому, что тот платит деньги, а потому, что быть лучшим  есть потребность самого сотрудника…
-          </p>
-          <p class="quotation__signature">
-            <cite>Генеральный директор АО «Компании Р-Лайн» Агафонов А.Н.</cite>
-          </p>
-        </blockquote>
+      <div class="shipment-item">
+        <img src="img/shipment2.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 09</h3>
+        <p class="shipment-item__descr">
+          чай, кофе,
+          специи, пряности
+        </p>
       </div>
-
-      <div class="about-us__gallery">
-        <img src="http://placehold.it/335x200" alt="">
-        <img src="http://placehold.it/335x200" alt="">
-        <img src="http://placehold.it/335x200" alt="">
+      <div class="shipment-item">
+        <img src="img/shipment3.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 10, 11</h3>
+        <p class="shipment-item__descr">
+          рис, ячмень,
+          солод, крахмал
+        </p>
       </div>
-
-
-  </div>
-
+      <div class="shipment-item">
+        <img src="img/shipment4.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 15</h3>
+        <p class="shipment-item__descr">
+          масло оливковое,
+          масло пальмовое
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment5.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 17</h3>
+        <p class="shipment-item__descr">
+          сахар,
+          кондитерские
+          изделия из сахара
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment6.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 21</h3>
+        <p class="shipment-item__descr">
+          изолят соевого
+          белка, дрожжи
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment7.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 23</h3>
+        <p class="shipment-item__descr">
+          аминокислоты,
+          готовые корма
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment8.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 28</h3>
+        <p class="shipment-item__descr">
+          продукты
+          неорганической
+          химии: 2,3 и другое
+        </p>
+      </div>
     </div>
 
-</section>
-
-
-<section class="shipment  block">
+    <div class="row">
+      <div class="shipment-item">
+        <img src="img/shipment9.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 29</h3>
+        <p class="shipment-item__descr">
+          органические
+          химические
+          соединения указать 2,3 и другое
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment10.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 32</h3>
+        <p class="shipment-item__descr">
+          органические
+          красители, краски, лаки, пигменты
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment11.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 35</h3>
+        <p class="shipment-item__descr">
+          пептоны, декстрины,
+          желатин, альбумины
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment12.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 38</h3>
+        <p class="shipment-item__descr">
+          масло талловое,
+          канифоль, реагенты,
+          растворители,
+          и многое другое
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment13.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 39</h3>
+        <p class="shipment-item__descr">
+          сырье полимерное,
+          трубы и фитинги,
+          полимеры,смолы,
+          полиамиды
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment14.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 48</h3>
+        <p class="shipment-item__descr">
+          бумага и картон
+          для полиграфии
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment15.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 72, 73</h3>
+        <p class="shipment-item__descr">
+          трубы и прокат,
+          легированные, стальные, крепеж
+        </p>
+      </div>
+      <div class="shipment-item">
+        <img src="img/shipment16.jpg" alt="">
+        <h3 class="shipment-item__title">Группа 76</h3>
+        <p class="shipment-item__descr">
+          алюминиевые
+          профили и трубы
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 
 <section class="benefits  block">
   <header class="page-header  page-header--section">
       <div class="container  container--relative">
-        <div class="logo">
-          <a href="#">
-            <img src="img/LOGO_fin.png" alt="Логотип">
-          </a>
-        </div>
+        <div class="row">
+          <div class="logo">
+            <a href="#">
+              <img src="img/logo--orange.svg" alt="Логотип Р-Лайн">
+            </a>
+          </div>
 
-        <div class="phone  phone--orange  phone--light-fw">
-          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
-        </div>
+          <div class="phone  phone--orange  hidden-xs">
+            <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
+          </div>
 
-        <a href="#" class="toggler  toggler--orange" id="toggler--5"><span></span></a>
+          <a href="#" class="toggler  toggler--orange" id="toggler--4"><span></span></a>
+        </div>
       </div>
 
-      <div class="burger-menu" id="burger--5">
+      <div class="burger-menu" id="burger--4">
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__list-item"><a href="#">Предложения</a></li>
@@ -362,23 +561,29 @@
     <h2 class="section-title">Почему мы?</h2>
     <div class="features-items-wrap">
       <div class="features-item">
-        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <h3 class="features-item__title">Снижаем<br> риски</h3>
         <p class="features-item__text">
-          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          Изменения в таможенном законодательстве, политические  риски, внедрение новых регламентов
+          и процедур напрямую влияют на срок доставки и себестоимость товара
+          на складе. Наша задача – сделать
+          эти риски управляемыми с помощью профессиональной сплоченной команды аналитиков, декларантов
+          и юристов.
         </p>
       </div>
 
       <div class="features-item">
-        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <h3 class="features-item__title">Соблюдаем<br> обязательства</h3>
         <p class="features-item__text">
-          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          Мы не только предлагаем маршруты
+          и согласовываем ставки, но и несем ответственность за предложенное решение. Мы готовы закрепить наши договоренности в Заявке либо Договоре.
         </p>
       </div>
 
       <div class="features-item">
-        <h3 class="features-item__title">Экспортно-импортная компания в Китае</h3>
+        <h3 class="features-item__title">Предлагаем решения, а&nbsp;не&nbsp;объяснения</h3>
         <p class="features-item__text">
-          Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текстами имеет ipsum, первую. Первую точках, решила живет которое рукопись.
+          Мы знаем – Клиенту неинтересны объяснения, ему важен Результат. Сильный менеджмент и собственный опыт выхода из сложных ситуаций являются залогом стабильности
+          для наших клиентов. В любых обстоятельствах мы действуем и готовы подтвердить это рекомендациями наших клиентов.
         </p>
       </div>
     </div>
@@ -393,19 +598,19 @@
       <div class="row">
         <div class="logo">
           <a href="#">
-            <img src="img/LOGO_fin_white.png" alt="Логотип">
+            <img src="img/logo.svg" alt="Логотип">
           </a>
         </div>
 
-        <div class="phone">
+        <div class="phone  hidden-xs">
           <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
         </div>
 
-        <a href="#" class="toggler" id="toggler--6"><span></span></a>
+        <a href="#" class="toggler" id="toggler--5"><span></span></a>
       </div>
     </div>
 
-    <div class="burger-menu" id="burger--6">
+    <div class="burger-menu" id="burger--5">
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a href="#">Предложения</a></li>
@@ -445,54 +650,47 @@
   </header>
 
   <div class="license__content">
-  <div class="container">
-    <h2 class="section-title  section-title--white">Лицензии</h2>
-  </div>
-  <div class="license-gallery">
-        <div class="license-gallery__container">
+    <div class="container">
+      <h2 class="section-title  section-title--white">Лицензии</h2>
+    </div>
+
+    <div class="license-gallery">
+      <div class="container  license-gallery__container">
         <div class="row">
-          <div class="license-gallery__item">
+          <figure class="license-gallery__item">
             <a id="license--1" href="img/license--1.png">
-              <img src="img/license--1.png" width="240" height="340" alt="" />
+              <img src="img/license--1.png" width="243" height="345" alt=""/>
             </a>
-          </div>
+            <figcaption>РАЭ - Российская Ассоциация<br> Экспедиторов</figcaption>
+          </figure>
 
-          <div class="license-gallery__item">
+          <figure class="license-gallery__item">
             <a id="license--2" href="img/license--2.png">
-              <img src="img/license--2.png" width="240" height="340" alt="" />
+              <img src="img/license--2.png" width="243" height="345" alt=""/>
             </a>
-          </div>
+            <figcaption>КИГ - лицензия Таможенного<br>представителя</figcaption>
+          </figure>
 
-          <div class="license-gallery__item">
+          <figure class="license-gallery__item">
             <a id="license--3" href="img/license--3.png">
-              <img src="img/license--3.png" width="240" height="340" alt="" />
+              <img src="img/license3--small.jpg" width="243" height="345" alt=""/>
             </a>
-          </div>
-        </div>
+            <figcaption>Экспортно-импортная<br>компания в Китае</figcaption>
+          </figure>
+
         </div>
       </div>
-
+    </div>
   </div>
 
 </section>
 
 <section class="contacts  block">
- <header class="page-header  page-header--section">
-      <div class="container  container--relative">
-        <div class="logo">
-          <a href="#">
-            <img src="img/LOGO_fin.png" width="200" height="90" alt="Логотип">
-          </a>
-        </div>
 
-        <div class="phone  phone--orange  phone--light-fw">
-          <a href="tel:+7(812)6422752">8 (812) 642-27-52</a>
-        </div>
-
-        <a href="#" class="toggler  toggler--orange" id="toggler--5"><span></span></a>
-      </div>
-
-      <div class="burger-menu" id="burger--5">
+  <div class="contacts__content">
+    <div class="container-fluid  container--relative">
+      <a href="#" class="toggler  toggler--orange" id="toggler--6"><span></span></a>
+      <div class="burger-menu" id="burger--6">
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__list-item"><a href="#">Предложения</a></li>
@@ -529,12 +727,17 @@
           <input class="callback-form__submit" type="submit" value="Заказать">
         </form>
       </div>
-  </header>
 
-  <div class="contacts__content">
-    <div class="container-fluid">
+
       <div class="row">
         <div class="contacts-items-wrap">
+
+          <div class="logo--contacts">
+            <a href="#">
+              <img src="img/logo--orange.svg" alt="Логотип Р-Лайн">
+            </a>
+          </div>
+
           <h3 class="section-title">Контакты</h3>
 
           <div class="contacts-item">
@@ -571,19 +774,18 @@
           </div>
         </div>
 
-        <div class="sidebar-wrap">
 
-         <!--  <div class="feedback">
-            <div class="navBtn">+</div>
-            <form class="feedback-form" action="#">
-              <legend class="feedback-form__title">Обратная связь</legend>
+        <div class="feedback">
+          <form class="feedback-form" action="#">
+            <legend class="feedback-form__title">Обратная связь</legend>
+            <div class="feedback-form__fields-wrap">
               <div class=" mdl-textfield  mdl-textfield--large  mdl-js-textfield  mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="sample3">
                 <label class="mdl-textfield__label" for="sample3">ФИО</label>
               </div>
 
               <div class="feedback-form__field  mdl-textfield  mdl-textfield--large  mdl-js-textfield  mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="sample3">
+                <input class="mdl-textfield__input" type="email" id="sample3">
                 <label class="mdl-textfield__label" for="sample3">E-mail</label>
               </div>
 
@@ -594,33 +796,30 @@
 
               <div class="feedback-form__field  mdl-textfield  mdl-textfield--large  mdl-js-textfield">
                 <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-                <label class="mdl-textfield__label" for="sample5">Комментарий</label>
+                <label class="mdl-textfield__label" for="sample5">Ваш комментарий</label>
               </div>
+            </div>
 
-              <input class="feedback-form__submit" type="submit" value="Отправить">
-            </form>
-          </div> -->
-
-          <div class="map-canvas" id="map"></div>
+            <input class="feedback-form__submit" type="submit" value="Отправить">
+          </form>
         </div>
 
-    </div>
+        <div class="map-canvas">
+          <div class="map" id="map"></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="block">
-  <div class="map-canvas" id="map"></div>
-</section>
-
-
-
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdfQ-GR6a4_a1ZPuz2hRJ4kYFvz_5Nptc"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/jquery.background-video.js"></script>
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjGAiz42P2243i_aoNCu4Pf0vU_xDWcZk&signed_in=true&callback=initMap"></script>
 <script src="js/script.js"></script>
+
 
 </body>
 </html>
