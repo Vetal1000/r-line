@@ -13,23 +13,37 @@
 }
 
 .logo {
-  .make-xs-column(10);
+  .make-xs-column(5);
   padding-top: 8px;
+  min-height: 60px;
 
-  img {
-    width: 71%;
-  }
+  background: url(../..//img/logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+
+  // img {
+  //   width: 71%;
+
+  //   @media all and (orientation: landscape) and (min-width: @screen-xs) {
+  //     width: 30%;
+  //   }
+  // }
 
   @media (min-width: @screen-sm) {
-    .make-sm-column(5);
+    .make-sm-column(3);
+    min-height: 70px;
   }
 
   @media (min-width: @screen-md) {
     .make-md-column(3);
+    min-height: 90px;
   }
 
   @media (min-width: @screen-lg) {
     .make-lg-column(3);
+    min-height: 90px;
   }
 }
 

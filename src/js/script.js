@@ -1,3 +1,11 @@
+
+$('a[href^="#"]').on('click',function(e){
+  e.preventDefault();
+  var target_position = $(this.hash).offset().top;            // целевая позиция скролла
+  $('body,html').animate({'scrollTop':target_position},450);  // анимируем прокрутку
+});
+
+
 // Бургер меню
 var toggler = document.getElementById('toggler');
 toggler.onclick = function(e){

@@ -18,9 +18,12 @@
     padding-bottom: 15px;
   }
 
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
     .make-sm-column(12);
+  }
 
+  @media (min-width: @screen-md) {
+    .make-md-column(4);
   }
 }
 
